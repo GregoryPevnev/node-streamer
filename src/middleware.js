@@ -21,7 +21,7 @@ module.exports = dirPath => async (req, res) => {
     else
         res.writeHead(200, {
             "Content-Length": result.range.size,
-            "Content-Disposition": "attachment;filename=" + name
+            "Content-Disposition": "attachment;filename=" + filename
         });
 
     return result.stream.pipe(res);
